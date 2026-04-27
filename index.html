@@ -234,6 +234,103 @@ nav {
 }
 .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
 
+.lang-toggle {
+  background: transparent;
+  color: var(--blue);
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1.5px solid var(--blue);
+  margin-left: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.lang-toggle:hover { background: var(--blue); color: #fff; }
+
+/* WhatsApp floating button */
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
+.wa-float svg { width: 30px; height: 30px; fill: #fff; }
+.wa-float-tooltip {
+  position: fixed;
+  bottom: 36px;
+  right: 96px;
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 9998;
+}
+.wa-float:hover + .wa-float-tooltip { opacity: 1; }
+
+/* Impact stats */
+.impact-stats { background: linear-gradient(135deg, #0A2E5D 0%, #1a4a8a 100%); padding: 70px 0; }
+.impact-stats .section-label { color: var(--gold); }
+.impact-stats .section-title { color: #fff; }
+.impact-stats .divider { background: var(--gold); }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
+.stat-card { text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 16px; border: 1px solid rgba(201,162,39,0.3); }
+.stat-number { font-size: 3rem; font-weight: 800; color: var(--gold); font-family: 'Merriweather', serif; line-height: 1; }
+.stat-label { color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-top: 8px; }
+.stat-suffix { font-size: 1.8rem; }
+
+/* Team */
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
+.team-card { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(10,46,93,0.10); padding: 2rem; text-align: center; transition: transform 0.3s; }
+.team-card:hover { transform: translateY(-6px); }
+.team-avatar { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg,#0A2E5D,#C9A227); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; color: #fff; font-weight: 700; }
+.team-name { color: #0A2E5D; font-family: 'Merriweather', serif; margin-bottom: 0.3rem; font-size: 1rem; }
+.team-title { color: #C9A227; font-weight: 600; margin-bottom: 0.8rem; font-size: 0.9rem; }
+.team-bio { color: #555; font-size: 0.88rem; line-height: 1.6; }
+.team-contact { margin-top: 0.8rem; font-size: 0.82rem; color: #0A2E5D; }
+
+/* Testimonials */
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
+.testi-card { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(10,46,93,0.08); padding: 2rem; border-left: 4px solid var(--gold); position: relative; }
+.testi-quote { font-size: 3rem; color: var(--gold); line-height: 0.5; margin-bottom: 1rem; font-family: Georgia, serif; }
+.testi-text { color: #444; font-size: 0.93rem; line-height: 1.7; font-style: italic; margin-bottom: 1.2rem; }
+.testi-author { font-weight: 700; color: #0A2E5D; font-size: 0.9rem; }
+.testi-role { color: #888; font-size: 0.82rem; }
+
+/* News */
+.news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
+.news-card { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(10,46,93,0.08); overflow: hidden; transition: transform 0.3s; }
+.news-card:hover { transform: translateY(-4px); }
+.news-date-bar { background: linear-gradient(135deg, #0A2E5D, #1a4a8a); padding: 10px 20px; color: var(--gold); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px; }
+.news-body { padding: 1.5rem; }
+.news-body h4 { color: #0A2E5D; font-family: 'Merriweather', serif; font-size: 0.95rem; margin-bottom: 0.7rem; }
+.news-body p { color: #555; font-size: 0.88rem; line-height: 1.6; }
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+.gallery-item { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: linear-gradient(135deg, #0A2E5D20, #C9A22720); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.3s; position: relative; }
+.gallery-item:hover { transform: scale(1.03); }
+.gallery-placeholder { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: #0A2E5D; font-size: 0.85rem; opacity: 0.6; }
+.gallery-placeholder svg { width: 36px; height: 36px; }
+
 /* Mobile nav toggle */
 .nav-toggle { display: none; background: none; border: none; padding: 8px; }
 .nav-toggle span {
@@ -1584,8 +1681,11 @@ nav { animation: navDrop 0.5s cubic-bezier(0.34,1.56,0.64,1) 2.8s both; }
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#publications">Publications</a>
+      <a href="#testimonials">Feedback</a>
+      <a href="#news">News</a>
       <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
+      <button class="lang-toggle" id="lang-btn" onclick="toggleLang()">🌍 Kiswahili</button>
       <button class="nav-cta">Book Consultation</button>
     </div>
   </div>
@@ -1849,61 +1949,11 @@ nav { animation: navDrop 0.5s cubic-bezier(0.34,1.56,0.64,1) 2.8s both; }
     <div class="section-title">Our Work in the Field</div>
     <div class="divider"></div>
     <p class="section-sub">Selected ongoing and completed research and transformation projects across Kenya.</p>
-    <div class="projects-grid">
-      <div class="proj-card">
-        <div class="proj-body">
-          <div class="proj-tag">Educational Research</div>
-          <h4>School Readiness Assessment Across Nairobi Counties</h4>
-          <p>Multi-county baseline study informing early childhood education policy frameworks and resource allocation.</p>
-          <div class="proj-metric">3 counties · Policy brief published</div>
-          <a href="#" class="proj-link">View case study →</a>
-        </div>
-      </div>
-      <div class="proj-card">
-        <div class="proj-body">
-          <div class="proj-tag">Community Development</div>
-          <h4>Livelihood Resilience Study — Arid &amp; Semi-Arid Regions</h4>
-          <p>Community-level research supporting NGO programming in underserved ASAL regions of Kenya.</p>
-          <div class="proj-metric">1,200 households surveyed</div>
-          <a href="#" class="proj-link">View case study →</a>
-        </div>
-      </div>
-      <div class="proj-card">
-        <div class="proj-body">
-          <div class="proj-tag">Innovation Initiative</div>
-          <h4>Institutional Transformation Programme for Secondary Schools</h4>
-          <p>Strategic planning and capacity building for school leadership teams across multiple counties.</p>
-          <div class="proj-metric">14 schools transformed</div>
-          <a href="#" class="proj-link">View case study →</a>
-        </div>
-      </div>
-      <div class="proj-card">
-        <div class="proj-body">
-          <div class="proj-tag">School Transformation</div>
-          <h4>Teacher Professional Development Programme</h4>
-          <p>Structured CPD programme for teachers in public secondary schools with measurable student outcome improvements.</p>
-          <div class="proj-metric">200+ teachers trained</div>
-          <a href="#" class="proj-link">View case study →</a>
-        </div>
-      </div>
-      <div class="proj-card">
-        <div class="proj-body">
-          <div class="proj-tag">Research &amp; M&amp;E</div>
-          <h4>NGO Programme Evaluation — Health &amp; Nutrition Sector</h4>
-          <p>Comprehensive evaluation of a multi-year community health programme for an international development partner.</p>
-          <div class="proj-metric">5 districts covered</div>
-          <a href="#" class="proj-link">View case study →</a>
-        </div>
-      </div>
-      <div class="proj-card">
-        <div class="proj-body">
-          <div class="proj-tag">Capacity Building</div>
-          <h4>Research Capacity Building for University Departments</h4>
-          <p>Multi-departmental training programme to strengthen research culture and publication output across three universities.</p>
-          <div class="proj-metric">3 universities · 80+ academics</div>
-          <a href="#" class="proj-link">View case study →</a>
-        </div>
-      </div>
+    <div style="text-align:center;padding:3rem 1rem;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(10,46,93,0.06);">
+      <svg fill="none" viewBox="0 0 24 24" stroke="#C9A227" stroke-width="1.3" style="width:56px;height:56px;margin-bottom:1rem;opacity:0.7;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      <h3 style="color:#0A2E5D;font-family:'Merriweather',serif;margin-bottom:0.5rem;">Projects Coming Soon</h3>
+      <p style="color:#888;font-size:0.93rem;">Our featured projects and case studies will be showcased here.</p>
+      <a href="mailto:salamalegacy@gmail.com?subject=Project Enquiry" style="display:inline-block;margin-top:1.2rem;background:var(--gold);color:var(--blue);padding:10px 24px;border-radius:6px;font-weight:700;font-size:0.88rem;text-decoration:none;">Enquire About a Project</a>
     </div>
   </div>
 </section>
@@ -1925,59 +1975,11 @@ nav { animation: navDrop 0.5s cubic-bezier(0.34,1.56,0.64,1) 2.8s both; }
       </select>
     </div>
     <div class="pub-grid" id="pub-grid">
-      <div class="pub-card" data-type="journal">
-        <span class="pub-type journal">Journal Article</span>
-        <h4>Improving Research Quality in African Higher Education Institutions</h4>
-        <p>An analysis of structural and methodological factors influencing research output quality across Sub-Saharan universities.</p>
-        <a href="#" class="pub-download">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          Download PDF
-        </a>
-      </div>
-      <div class="pub-card" data-type="policy">
-        <span class="pub-type policy">Policy Brief</span>
-        <h4>Data Analytics for Educational Decision-Making in Kenya</h4>
-        <p>Recommendations for county education departments on integrating data-driven decision tools into school management systems.</p>
-        <a href="#" class="pub-download">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          Download PDF
-        </a>
-      </div>
-      <div class="pub-card" data-type="report">
-        <span class="pub-type report">Research Report</span>
-        <h4>Monitoring &amp; Evaluation Practices in Kenyan NGOs</h4>
-        <p>A sector-wide assessment of M&amp;E systems, capacity and learning culture among development organisations in Kenya.</p>
-        <a href="#" class="pub-download">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          Download PDF
-        </a>
-      </div>
-      <div class="pub-card" data-type="journal">
-        <span class="pub-type journal">Journal Article</span>
-        <h4>Innovation in Educational Transformation: Case Studies from East Africa</h4>
-        <p>Comparative analysis of successful school transformation models across Kenya, Uganda and Tanzania.</p>
-        <a href="#" class="pub-download">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          Download PDF
-        </a>
-      </div>
-      <div class="pub-card" data-type="policy">
-        <span class="pub-type policy">Policy Brief</span>
-        <h4>Effective Monitoring and Evaluation Practices for Development Partners</h4>
-        <p>Guidelines for implementing adaptive M&amp;E frameworks that respond to programme learning and context changes.</p>
-        <a href="#" class="pub-download">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          Download PDF
-        </a>
-      </div>
-      <div class="pub-card" data-type="report">
-        <span class="pub-type report">Research Report</span>
-        <h4>Community Resilience and Development in Arid Regions of Kenya</h4>
-        <p>Baseline findings from a multi-site study on livelihood strategies, social capital and community organisation in ASAL areas.</p>
-        <a href="#" class="pub-download">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          Download PDF
-        </a>
+      <div class="pub-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:2px dashed #C9A22740;background:#fafbff;">
+        <svg fill="none" viewBox="0 0 24 24" stroke="#C9A227" stroke-width="1.5" style="width:40px;height:40px;margin-bottom:1rem;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        <h4 style="color:#0A2E5D;margin-bottom:0.5rem;">Publications Coming Soon</h4>
+        <p style="color:#888;font-size:0.88rem;">New publications and resources will be added here as they become available.</p>
+        <a href="mailto:salamalegacy@gmail.com?subject=Publication Submission" style="margin-top:1rem;color:#C9A227;font-size:0.85rem;font-weight:600;">📧 Submit a publication</a>
       </div>
     </div>
   </div>
@@ -1990,35 +1992,90 @@ nav { animation: navDrop 0.5s cubic-bezier(0.34,1.56,0.64,1) 2.8s both; }
     <div class="section-label">Insights &amp; blog</div>
     <div class="section-title">From Our Knowledge Hub</div>
     <div class="divider"></div>
-    <div class="blog-grid">
-      <div class="blog-card">
-        <div class="blog-body">
-          <div class="blog-cat">Research Excellence</div>
-          <h4>Improving Research Quality in Africa: Challenges and Opportunities</h4>
-          <p>A look at structural barriers to high-quality research in African universities and what institutions can do to address them systematically.</p>
-          <a href="#" class="read-more">Read more →</a>
+    <div style="text-align:center;padding:3rem 1rem;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(10,46,93,0.06);">
+      <svg fill="none" viewBox="0 0 24 24" stroke="#C9A227" stroke-width="1.3" style="width:56px;height:56px;margin-bottom:1rem;opacity:0.7;"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+      <h3 style="color:#0A2E5D;font-family:'Merriweather',serif;margin-bottom:0.5rem;">Blog Posts Coming Soon</h3>
+      <p style="color:#888;font-size:0.93rem;">Articles, insights and knowledge resources from our team will be published here.</p>
+      <a href="mailto:salamalegacy@gmail.com?subject=Blog Contribution" style="display:inline-block;margin-top:1.2rem;background:var(--gold);color:var(--blue);padding:10px 24px;border-radius:6px;font-weight:700;font-size:0.88rem;text-decoration:none;">Submit an Article</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS / FEEDBACK -->
+<section class="section section-bg" id="testimonials">
+  <div class="container">
+    <div class="section-label" data-en="What clients say" data-sw="Wanachosema Wateja">What clients say</div>
+    <div class="section-title" data-en="Feedback &amp; Testimonials" data-sw="Maoni na Ushuhuda">Feedback &amp; Testimonials</div>
+    <div class="divider"></div>
+
+    <!-- Empty state -->
+    <div id="testi-empty" style="text-align:center;padding:3rem 1rem;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(10,46,93,0.06);margin-bottom:2.5rem;">
+      <svg fill="none" viewBox="0 0 24 24" stroke="#C9A227" stroke-width="1.3" style="width:56px;height:56px;margin-bottom:1rem;opacity:0.7;"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+      <h3 style="color:#0A2E5D;font-family:'Merriweather',serif;margin-bottom:0.5rem;">No feedback yet</h3>
+      <p style="color:#888;font-size:0.93rem;">Be the first to share your experience with Salama Legacy Centre.</p>
+    </div>
+
+    <!-- Feedback submission form -->
+    <div style="background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(10,46,93,0.08);padding:2.5rem;max-width:620px;margin:0 auto;">
+      <h3 style="color:#0A2E5D;font-family:'Merriweather',serif;margin-bottom:0.3rem;" data-en="Share Your Experience" data-sw="Shiriki Uzoefu Wako">Share Your Experience</h3>
+      <p style="color:#888;font-size:0.88rem;margin-bottom:1.5rem;" data-en="Your feedback helps us improve and inspires others." data-sw="Maoni yako yanatusaidia kuboresha na kuwahamasisha wengine.">Your feedback helps us improve and inspires others.</p>
+      <form action="https://formspree.io/f/maqazybg" method="POST" id="feedback-form">
+        <input type="hidden" name="_subject" value="New Feedback — Salama Legacy Centre">
+        <input type="hidden" name="form_type" value="feedback">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <input type="text" name="full_name" placeholder="Full Name *" required style="padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:0.9rem;outline:none;font-family:inherit;">
+          <input type="text" name="organization" placeholder="Organisation / Institution" style="padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:0.9rem;outline:none;font-family:inherit;">
         </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-body">
-          <div class="blog-cat">Educational Transformation</div>
-          <h4>Innovation in Educational Transformation: Lessons from Kenyan Schools</h4>
-          <p>Case studies from high-performing Kenyan secondary schools show what leadership, data, and community commitment can achieve together.</p>
-          <a href="#" class="read-more">Read more →</a>
+        <input type="email" name="email" placeholder="Email address" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:0.9rem;margin-bottom:1rem;outline:none;font-family:inherit;box-sizing:border-box;">
+        <div style="margin-bottom:1rem;">
+          <label style="font-size:0.85rem;color:#555;display:block;margin-bottom:6px;" data-en="Rate your experience" data-sw="Kadiria uzoefu wako">Rate your experience</label>
+          <div style="display:flex;gap:8px;font-size:1.8rem;cursor:pointer;" id="star-rating">
+            <span onclick="setRating(1)" class="star" style="color:#ddd;">★</span>
+            <span onclick="setRating(2)" class="star" style="color:#ddd;">★</span>
+            <span onclick="setRating(3)" class="star" style="color:#ddd;">★</span>
+            <span onclick="setRating(4)" class="star" style="color:#ddd;">★</span>
+            <span onclick="setRating(5)" class="star" style="color:#ddd;">★</span>
+          </div>
+          <input type="hidden" name="rating" id="rating-value">
         </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-body">
-          <div class="blog-cat">Data &amp; M&amp;E</div>
-          <h4>Data Analytics for Decision Making in Development Organisations</h4>
-          <p>Practical guidance on using data analytics tools to improve programme decision-making, learning loops, and stakeholder reporting.</p>
-          <a href="#" class="read-more">Read more →</a>
+        <textarea name="feedback" placeholder="Tell us about your experience with Salama Legacy Centre... *" required rows="4" style="width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:0.9rem;resize:vertical;margin-bottom:1rem;outline:none;font-family:inherit;box-sizing:border-box;"></textarea>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:1.2rem;">
+          <input type="checkbox" id="consent" name="consent" value="yes" required style="width:16px;height:16px;accent-color:#0A2E5D;">
+          <label for="consent" style="font-size:0.82rem;color:#666;" data-en="I consent to my feedback being displayed on the website" data-sw="Nakubali maoni yangu yaonyeshwe kwenye tovuti">I consent to my feedback being displayed on the website</label>
+        </div>
+        <button type="submit" style="background:linear-gradient(135deg,#0A2E5D,#1a4a8a);color:#fff;padding:13px 32px;border:none;border-radius:8px;font-size:0.95rem;font-weight:600;cursor:pointer;width:100%;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" data-en="Submit Feedback" data-sw="Wasilisha Maoni">Submit Feedback</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+function setRating(n) {
+  document.getElementById('rating-value').value = n + ' stars';
+  document.querySelectorAll('#star-rating .star').forEach(function(s, i) {
+    s.style.color = i < n ? '#C9A227' : '#ddd';
+  });
+}
+</script>
+
+<!-- NEWS -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-label" data-en="Latest updates" data-sw="Habari za Hivi Karibuni">Latest updates</div>
+    <div class="section-title" data-en="News &amp; Announcements" data-sw="Habari na Matangazo">News &amp; Announcements</div>
+    <div class="divider"></div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-date-bar">April 2026</div>
+        <div class="news-body">
+          <h4 data-en="Salama Legacy Centre Launches Official Website" data-sw="Salama Legacy Centre Inazindua Tovuti Rasmi">Salama Legacy Centre Launches Official Website</h4>
+          <p data-en="We are proud to announce the launch of our official website, making our services more accessible to scholars and institutions across Kenya and beyond." data-sw="Tunafurahi kutangaza uzinduzi wa tovuti yetu rasmi, kufanya huduma zetu zipatikane zaidi kwa wasomi na taasisi kote Kenya na zaidi.">We are proud to announce the launch of our official website, making our services more accessible to scholars and institutions across Kenya and beyond.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- CTA BANNER -->
 <div class="cta-section">
@@ -2329,8 +2386,53 @@ nav { animation: navDrop 0.5s cubic-bezier(0.34,1.56,0.64,1) 2.8s both; }
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     revealEls.forEach(function(el) { observer.observe(el); });
+
+    // Animate counters when stats section is visible
+    var counters = document.querySelectorAll('.count');
+    var countersDone = false;
+    var statsObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !countersDone) {
+          countersDone = true;
+          counters.forEach(function(counter) {
+            var target = parseInt(counter.getAttribute('data-target'));
+            var duration = 1800;
+            var step = target / (duration / 16);
+            var current = 0;
+            var timer = setInterval(function() {
+              current += step;
+              if (current >= target) { current = target; clearInterval(timer); }
+              counter.textContent = Math.floor(current);
+            }, 16);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    var statsSection = document.getElementById('impact');
+    if (statsSection) statsObserver.observe(statsSection);
+
   });
 })();
+</script>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/254724158187?text=Hello%20Salama%20Legacy%20Centre%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<span class="wa-float-tooltip">Chat with us on WhatsApp</span>
+
+<!-- Language Toggle Script -->
+<script>
+var currentLang = 'en';
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'sw' : 'en';
+  var btn = document.getElementById('lang-btn');
+  btn.textContent = currentLang === 'en' ? '🌍 Kiswahili' : '🌍 English';
+  document.querySelectorAll('[data-en]').forEach(function(el) {
+    var text = el.getAttribute('data-' + currentLang);
+    if (text) el.innerHTML = text;
+  });
+}
 </script>
 
 </body>
